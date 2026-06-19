@@ -1,0 +1,21 @@
+# File: .github/workflows/security-pipeline.yml
+name: DevSecOps IaC Scanner (Checkov)
+
+on: 
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  scan-infrastructure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Repository Code
+        uses: actions/checkout@v4
+
+      - name: Execute Checkov Security Scan
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: . 
+          framework: terraform 
