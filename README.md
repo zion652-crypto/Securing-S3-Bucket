@@ -1,4 +1,4 @@
-Enterprise DevSecOps IaC Scanner: Checkov
+DevSecOps IaC Scanner: Checkov
 
 Welcome to the **Infrastructure as Code (IaC) Security Automation** portfolio piece. This project demonstrates how to implement a local and pipeline-driven security scanner using **Checkov** to enforce cloud infrastructure hardening prior to deployment.
 
